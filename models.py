@@ -1,17 +1,18 @@
-from sqlalchemy import create_engine, integer , column, String 
+from sqlalchemy import Column, Integer, String
 from database import Base
-#Database models 
+
+# Database models
 
 class Joboffer(Base):
-    __tablename__= 'joboffer'
-    id = column( integer, primary_key = True , nullable = False, index = True)
-    titre = column(String(100) , nullable=False)
-    entreprise = column(String(100) , nullable=False)
-    description = column(String(500) , nullable=False)
+    __tablename__ = 'joboffer'
+    id = Column(Integer, primary_key=True, nullable=False, index=True)
+    titre = Column(String(100), nullable=False)
+    entreprise = Column(String(100), nullable=False)
+    description = Column(String(500), nullable=False)
 
 
 class SwipeAction(Base):
-    __tablename__='swipeaction'
-    id = column (integer, primary_key = True , nullable = False, index = True)
-    joboffer_id = column (integer, nullable = False)
-    action = column (String(10), nullable = False)  
+    __tablename__ = 'swipeaction'
+    id = Column(Integer, primary_key=True, nullable=False, index=True)
+    joboffer_id = Column(Integer, nullable=False)
+    action = Column(String(10), nullable=False)

@@ -104,3 +104,11 @@ Thumbs.db
 .cache/
 huggingface/
 transformers_cache/
+
+# Données locales et documents confidentiels (ton CV, PDFs)
+data/
+
+# Base de données vectorielle ChromaDB (fichiers locaux persistés)
+chroma/
+chroma_db/
+.chroma/

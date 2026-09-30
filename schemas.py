@@ -14,3 +14,6 @@ class SwipeAction(BaseModel):
     joboffer_id : int
     action : str
 
+
+class SearchCriteria(BaseModel):
+    critere: str
